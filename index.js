@@ -13,6 +13,8 @@ $(document).ready(function() {
     return false;
   });
 
+  document.getElementById("container").style.fontSize = "25px";
+  
   function createQuote() {
     // The following is the API call to the MashApe random quotes API server
     var output = $.ajax({
@@ -35,13 +37,11 @@ $(document).ready(function() {
           4: ['I have always depended on the kindness of strangers.', 'A Streetcar Named Desire']
         };
         var randomQuoteNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
-
         $('#quote').text(quotes[randomQuoteNumber][0]);
         $('#author').text(quotes[randomQuoteNumber][1]);
 
       },
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader("X-Mashape-Authorization", "arpa5majc9mshUnIUQoKSEzqUY05p1ttLskjsnCCSzxm0b7pM0"); // Enter here your Mashape key
+      beforeSend: function(xhr) {      xhr.setRequestHeader("5xLSCfxYlhmshb1eiVqqpoSYAdvPp1Ut15Ajsnplj7Ifq7VdQw"); // Enter here your Mashape key
       }
     });
   }
